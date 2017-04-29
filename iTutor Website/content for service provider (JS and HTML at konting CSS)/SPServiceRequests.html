@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>SP Current Services</title>
+        <title>SP Service Requests</title>
         <style>
             ul {
                 list-style-type: none;
@@ -90,6 +90,8 @@
                     <p id="clientContactNo">Contact No.: </p>
                     <p id="clientHomeAddress">Home Address: </p>
                     <button id="myBtn">More Details</button>
+                    <button id="accept">Accept</button>
+                    <button id="decline">Decline</button>
                     <div id="myModal" class="modal">
                         <div class="modal-content">
                             <span class="close">&times;</span>
@@ -100,7 +102,10 @@
                             <p id="clientContactNo">Contact No.: </p>
                             <p id="clientGender">Gender: </p>
                             <p id="clientService">Service: </p>
-                        
+                            <select>
+                                <option id="paid">Paid</option>
+                                <option id="unpaid">Unpaid</option>
+                            </select>
                         </div>
                         
                     </div>
