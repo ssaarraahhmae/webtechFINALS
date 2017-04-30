@@ -8,7 +8,7 @@
     <meta name="author" content="">
    
 
-    <title>iTutor</title>
+    <title>iTutor | Home</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -33,11 +33,15 @@
   </head>
 
   <body>
+    <div class="header-wrapper">
+      <div class="site-name">
+          <img src="img/logo.png" alt="" class="img-responsive"> 
+      </div>
+    </div>
     <div class="menu">
       <div class="navbar">
         <div class="container">
           <div class="navbar-header">
-              <img src="img/logo.png" alt="" class="img-responsive">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <i class="fw-icon-th-list"></i>
             </button>
@@ -47,16 +51,19 @@
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Services</a></li>
-              <li><a href="#">Solutions</a></li>
-              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Job Openings</a></li>
               <li><a href="#">Contact</a></li>
+              <li>
+                  <div class="dropdown">
+                      <button onclick="myFunction()" class="dropbtn">LOG IN</button>
+                      <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Client</a>
+                        <a href="#">Service Provider</a>
+                        <a href="#">Admin</a>
+                      </div>
+                    </div>
+                </li>
             </ul>
-              <div class="input-group">
-                <input id="search-bar" itype="text" name="search" placeholder="Search...">
-                <span class="input-group-btn">
-              <input type="search" class="button btn btn-default" value="Search" name="search" id="search">
-                </span>
-            </div>
           </div><!--/.navbar-collapse -->
         </div>
       </div>
@@ -65,10 +72,6 @@
           <select class="selectnav">
             <option value="#" selected="">Home</option>
             <option value="#">About</option>
-            <option value="#">→ Another action</option>
-            <option value="#">→ Something else here</option>
-            <option value="#">→ Another action</option>
-            <option value="#">→ Something else here</option>
             <option value="#">Services</option>
             <option value="#">Work</option>
             <option value="#">Contact</option>
@@ -85,27 +88,12 @@
         <div class="carousel-inner">
           <div class="item active">
             <img src="img/banner-image1.jpg" alt="">
-            <div class="carousel-caption">
-              <h1>Morbi semuis</h1>
-              <h2>Praesent dapibus, neque id cursus faucibus tortas augue eu vulputate</h2>
-              <a href="#" class="btn">facilis</a>
-            </div>
           </div>
           <div class="item">
             <img src="img/banner-image2.jpg" alt="">
-            <div class="carousel-caption">
-              <h1>Morbi semuis</h1>
-              <h2>Praesent dapibus, neque id cursus faucibus tortas augue eu vulputate</h2>
-              <a href="#" class="btn">facilis</a>
-            </div>
           </div>
           <div class="item">
             <img src="img/banner-image4.jpg" alt="">
-            <div class="carousel-caption">
-              <h1>Morbi semuis</h1>
-              <h2>Praesent dapibus, neque id cursus faucibus tortas augue eu vulputate</h2>
-              <a href="#" class="btn">facilis</a>
-            </div>
           </div>
         </div>
 
@@ -125,11 +113,10 @@
           <div class="col-md-3">
             <div class="block">
             <div class="thumbnail">
-              <img src="img/learn.png" alt="" class="img-responsive">
+              <img src="img/img1.jpg" alt="" class="img-responsive">
               <div class="caption">
-                <h1>LEARN</h1>
-                <p>Cuibstui ipsum dolor sit amet, consectetuer adipiscing eli onec odio cuisque volutpat mattis</p>
-                <a class="btn" href="#">more</a>
+                <h1>Learn</h1>
+                  <p>We want to help you on the things that you want learn</p>
               </div>
               </div>
             </div>
@@ -137,11 +124,10 @@
             <div class="col-md-3">
               <div class="block">
                 <div class="thumbnail">
-                    <img src="img/explore.png" alt="" class="img-responsive">
+                    <img src="img/img2.jpg" alt="" class="img-responsive">
                     <div class="caption">
-                      <h1>EXPLORE</h1>
-                      <p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis ctor, ultrices ut, element</p>
-                      <a class="btn" href="#">more</a>
+                      <h1>Explore</h1>
+                        <p>We'll help you explore and experience more things that you don't know</p>
                     </div>
                 </div>
               </div>
@@ -149,11 +135,10 @@
             <div class="col-md-3">
               <div class="block">
                 <div class="thumbnail">
-                  <img src="img/fun.png" alt="" class="img-responsive">
+                  <img src="img/img3.jpg" alt="" class="img-responsive">
                   <div class="caption">
-                    <h1>HAVE FUN</h1>
-                    <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean</p>
-                    <a class="btn" href="#">more</a>
+                    <h1>Enjoy</h1>
+                      <p>We want you to know that studying is also an enjoyable thing to do</p>
                   </div>
                   </div>
               </div>
@@ -161,11 +146,10 @@
             <div class="col-md-3">
             <div class="block">
             <div class="thumbnail">
-              <img src="img/improve.png" alt="" class="img-responsive">
+              <img src="img/img4.jpg" alt="" class="img-responsive">
               <div class="caption">
-                <h1>IMPROVE</h1>
-                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, mod in, pharetra ultrici</p>
-                <a class="btn" href="#">more</a>
+                <h1>Improve</h1>
+                <p>We want to help you improve your skills and knowledge to </p>
               </div>
               </div>
             </div>
@@ -233,21 +217,25 @@
             <div class="col-md-6">
               <div class="block">
                 <div class="block-title">
-                    <h1>Tutorial Services</h1>
-                    <h2>Integer vitae libero ac risus egestas placerat</h2>
+                    <h1>SERVICES OFFERED</h1>
                 </div>
                   <div class="panel-group" id="accordion">
                     <div class="panel panel-default">
                       <div class="panel-heading accordion-caret">
                         <h4 class="panel-title">
                           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                            Donec quis dui at dolor tempor
+                            Tutorial Services
                           </a>
                         </h4>
                       </div>
                       <div id="collapseOne" class="panel-collapse collapse in">
-                        <div class="panel-body">Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra 
-                                      ultricies in, diam. Sed arcu. Cras consequat.</div>
+                        <div class="panel-body">
+                            <li>Pre-school</li>
+                            <li>Grade School</li>
+                            <li>High School</li>
+                            <li>College Advance</li>
+                            <a href="#" class="btn">More Info</a>
+                          </div>
                       </div>
                     </div>
 
@@ -255,13 +243,19 @@
                       <div class="panel-heading accordion-caret">
                         <h4 class="panel-title">
                           <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                            Vivamus molestie gravida turpis
+                            Special Workshop
                           </a>
                         </h4>
                       </div>
                       <div id="collapseTwo" class="panel-collapse collapse">
-                        <div class="panel-body">Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra 
-                                      ultricies in, diam. Sed arcu. Cras consequat.</div>
+                        <div class="panel-body">
+                            <li>Dance Workshop</li>
+                            <li>Voice Lessons</li>
+                            <li>Guitar Lessons</li>
+                            <li>Violin Lessons</li>
+                            <li>Piano Lessons</li>
+                            <a href="#" class="btn">More Info</a>
+                          </div>
                       </div>
                     </div>
 
@@ -269,13 +263,21 @@
                       <div class="panel-heading accordion-caret">
                         <h4 class="panel-title">
                           <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                            Fusce lobortis lorem at ipsum semper 
+                           Educational Services 
                           </a>
                         </h4>
                       </div>
                       <div id="collapseThree" class="panel-collapse collapse">
-                        <div class="panel-body">Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra 
-                                      ultricies in, diam. Sed arcu. Cras consequat.</div>
+                        <div class="panel-body">
+                            <li>Toddlers</li>
+                            <li>Pre-Nursery Tutorials</li>
+                            <li>Reading and Writing Tutorials</li>
+                            <li>Special Education</li>
+                            <li>Math Tutorial</li>
+                            <li>English Tutorial</li>
+                            <li>Science Tutorial</li>
+                            <a href="#" class="btn">More Info</a>
+                          </div>
                       </div>
                     </div>
 
@@ -283,13 +285,20 @@
                       <div class="panel-heading accordion-caret">
                         <h4 class="panel-title">
                           <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-                            Nam convallis pellentesque nisl
+                            Training Services
                           </a>
                         </h4>
                       </div>
                       <div id="collapseFour" class="panel-collapse collapse">
-                        <div class="panel-body">Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra 
-                                      ultricies in, diam. Sed arcu. Cras consequat.</div>
+                        <div class="panel-body">
+                            <li>Basic Computer Application</li>
+                            <li>MS Office Familiarization</li>
+                            <li>English Proficiency for Filipinos and Foreigners</li>
+                            <li>Financial Planning</li>
+                            <li>Video Editing Lessons</li>
+                            <li>Programming Lessons</li>
+                            <a href="#" class="btn">More Info</a>
+                          </div>
                       </div>
                     </div>
                 </div>
@@ -302,22 +311,16 @@
         <div class="featured-content">
           <div class="col-md-6">
             <div class="block">
-              <img src="img/img5.jpg" alt="" class="img-spacing thumbnail">
-              <h1>Quisque a lectus. Donec consectetuer ligua </h1>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. lentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin  laoreet viverra.
-              </p>
-              <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis.
-              </p>
-              <a href="#" class="btn">more</a>
+              <img src="img/mission.png" alt="" class="img-spacing thumbnail">
+              <h1>MISSION</h1>
+              <p>To be the company of choice of those who always wanted innovation and solution.</p>
             </div>            
           </div>
           <div class="col-md-6">
             <div class="block">
-              <img src="img/img6.jpg" alt="" class="img-spacing thumbnail">
-              <h1>Sed adipiscing ornare risus Morbi est est</h1>
-              <p>Cupsim  ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. lentesque aliquet nibh nec urna.In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula     sollicitudi.</p>
-              <p>Vivamus ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis.</p>
-              <a href="#" class="btn">more</a>
+              <img src="img/vision.png" alt="" class="img-spacing thumbnail">
+              <h1>VISION</h1>
+              <p>We empower, we enable, and we inspire peoople through training and business solutions.</p>
             </div>            
           </div>
         </div>
@@ -352,16 +355,7 @@
             </ul>
           </div>
           <div class="block col-md-3">
-            <h1>Praesent dapibus, neque id cursus faucibus</h1>
-            <div class="input-group">
-                <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
-                <span class="input-group-btn">
-              <input type="submit" class="button btn btn-default" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
-                </span>
-            </div> 
-          </div>
-          <div class="block col-md-3">
-            <h1> Aliquam quam lectusfacilisis auctor</h1>
+            <h1> Follow us on our Social Media Accounts</h1>
             <ul class="social">
               <li><a href="#"><i class="fw-icon-twitter"></i></a></li>
               <li><a href="#"><i class="fw-icon-facebook"></i></a></li>
@@ -371,20 +365,6 @@
         </div>
         </div>
         
-      </div>
-      <div class="copy-rights">
-      <div class="container">
-        <div class="row">
-          
-            <div class="col-md-6">
-              Copyright(c) website name. Designed by: <a href="http://www.alltemplateneeds.com"> www.alltemplateneeds.com</a>
-            </div>
-            <div class="col-md-6">
-              Images from: <a href="http://www.wallpaperswide.com">http://wallpaperswide.com</a> / <a href="http://www.wallcoo.net"> www.wallcoo.net</a>
-            </div>
-            
-          </div>
-        </div>
       </div>
       </div>
 
