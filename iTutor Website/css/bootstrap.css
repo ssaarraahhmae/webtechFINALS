@@ -1586,7 +1586,7 @@ table th[class*="col-"] {
   .navbar {display: block !important;}
   .navbar-toggle {float: none !important; color: #fff !important; margin-right: 0 !important;}
   .navbar-nav {display: block !important; margin-top: 0 !important;}
-  .header-wrapper {padding: 30px 0 !important;}
+  .header-wrapper {padding: 10px 0 !important;}
   .banner .carousel-caption h1 {font-size: 40px !important; padding-bottom: 10px !important; margin: 0 !important;}
   .banner .carousel-caption h2 {font-size: 18px !important; padding-bottom: 10px !important; line-height: 26px !important;}
   .banner .carousel-caption {top: 0 !important;}  
