@@ -2,23 +2,66 @@
 <html lang = "en">
 	<head>
 		<title>SPProfile</title>
+		<style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 150px;
+                background-color: #f1f1f1;
+            }
+
+            li a {
+                display: block;
+                color: #000;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: #555;
+                color: white;
+            }
+
+            .active {
+                background-color: #4CAF50;
+                color: white;
+            }
+           </style>
 	</head>
 	<body>
 		<div class = "main">
+		<div id="sidenavbar">
+            <nav>
+                <ul>
+                    <li><a href="SPCurrentServices.html">Current Services</a></li>
+                    <li><a href="SPServiceRequests.html">Service Requests</a></li>
+                    <li><a href="SPHistory.html">History</a></li>
+                    <li><a href="SPProfile.html">Profile</a></li>
+                    <li><a href="SPEditProfile.html">Edit Profile</a></li>
+                    <li><a href="SPAccountSetting.html">Account Setting</a></li>
+                </ul>
+            </nav>
+            </div>
 			<div id = "profile_content">
 				<p id = "header"><h3>Your Profile</h3></p>
 				<div id="clientprofpic">
                     <img src="profilepic.png">
                 </div>
-				<p id = "name">Name: </p>
-				<p id = "email">Email: </p>
-				<p id = "age">Age: </p>
-				<p id = "contactnum">Contact No.: </p>
-				<p id = "gender">Gender: </p>
-				<p id = "homeaddress">Home Address: </p>
-				<p id = "skills">Skilss: </p>
-				<p id = "services">Services: </p>
-				<p id = "specialization">Specialization: </p>
+                <p>Name</p>
+				<p id = "name"></p>
+				<p>Email</p>
+				<p id = "email"></p>
+				<p>Age</p>
+				<p id = "age"></p>
+				<p>Contact No.</p>
+				<p id = "contactnum"></p>
+				<p>Gender</p>
+				<p id = "gender"></p>
+				<p>Home Address</p>
+				<p id = "homeaddress"></p>
+				<p>List of Services I offered</p>
+				<p id = "skills"></p>
 				<input type = "button" id="okbutton" value="OK">
 			</div>
 		</div>
