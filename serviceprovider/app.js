@@ -4,27 +4,43 @@
 var express = require('express')
 var app = express()
 var path = require('path');
-
+/*
 app.use(express.static('public'))
+*/
+
+var myLogger = function (req, res, next) {
+	console.log('Time: ', Date.now())
+	next()
+}
+
+app.use(myLogger)
+
+app.get('/', function(req, res) {
+	res.send('Hello World!')
+})
 
 app.listen(3000, function() {
     console.log('Example app listening on port 3000!')
 });
 
+
 var mysql = require('mysql')
 var connection = mysql.createConnection({
     host    : 'localhost',
-    user    : 'dbuser',
-    password: 's3kreee7',
-    database: 'my_db'
+    user    : 'root',
+    password: '',
+    database: 'serviceprovider'
 });
 
-connection.connect();
+connection.connect(function(err) {
+	if (err) throw err
+	console.log('You are now connected...')
+});
 
-connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
+connection.query('SELECT * FROM spinfo', function (err, rows, fields) {
     if (err) throw err
 
-    console.log('The solution is: ', rows[0].solution)
+    console.log('The solution is: ', rows[1].name)
 })
 
-conneciton.end();
+connection.end();
