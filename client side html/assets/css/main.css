@@ -2577,6 +2577,17 @@ input[type="button"].btn-block {
 
 /* Table */
 
+.box1 {
+  float: left;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+}
+.after-box1 {
+  clear: left;
+}
+
+
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
 		overflow-x: auto;
@@ -3082,6 +3093,7 @@ input[type="button"].btn-block {
 		text-align: center;
 		top: 0;
 		width: 23em;
+        height:inherit;
 		right: 0;
 	}
 
