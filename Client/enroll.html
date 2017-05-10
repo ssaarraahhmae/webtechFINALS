@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>iTutor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<style>
+	/* Full-width input fields */
+	input[type=text], input[type=password] {
+	    width: 100%;
+	    padding: 12px 20px;
+	    margin: 8px 0;
+	    display: inline-block;
+	    border: 1px solid #ccc;
+	    box-sizing: border-box;
+	}
+        
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+        }
+
+        td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+        }
+
+        tr:nth-child(even) {
+    background-color: #dddddd;
+        }
+
+	/* Set a style for all buttons */
+	button {
+	    background-color: #4CAF50;
+	    color: white;
+	    padding: 14px 20px;
+	    margin: 8px 0;
+	    border: none;
+	    cursor: pointer;
+	    width: 100%;
+	}
+
+	button:hover {
+	    opacity: 0.8;
+	}
+
+	/* Extra styles for the cancel button */
+	.cancelbtn {
+	    width: auto;
+	    padding: 10px 18px;
+	    background-color: #f44336;
+	}
+
+	/* Center the image and position the close button */
+	.imgcontainer {
+	    text-align: center;
+	    margin: 24px 0 12px 0;
+	    position: relative;
+	}
+
+	img.avatar {
+	    width: 40%;
+	    border-radius: 50%;
+	}
+
+	.container {
+	    padding: 16px;
+	}
+
+	span.psw {
+	    float: right;
+	    padding-top: 16px;
+	}
+
+	/* The Modal (background) */
+	.modal {
+	    display: none; /* Hidden by default */
+	    position: fixed; /* Stay in place */
+	    z-index: 1; /* Sit on top */
+	    left: 0;
+	    top: 0;
+	    width: 100%; /* Full width */
+	    height: 100%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	    background-color: rgb(0,0,0); /* Fallback color */
+	    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	    padding-top: 60px;
+	}
+
+	/* Modal Content/Box */
+	.modal-content {
+	    background-color: #fefefe;
+	    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	    border: 1px solid #888;
+	    width: 25%; /* Could be more or less, depending on screen size */
+	}
+
+	/* The Close Button (x) */
+	.close {
+	    position: absolute;
+	    right: 25px;
+	    top: 0;
+	    color: #000;
+	    font-size: 35px;
+	    font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+	    color: red;
+	    cursor: pointer;
+	}
+
+	/* Add Zoom Animation */
+	.animate {
+	    -webkit-animation: animatezoom 0.6s;
+	    animation: animatezoom 0.6s
+	}
+
+	@-webkit-keyframes animatezoom {
+	    from {-webkit-transform: scale(0)} 
+	    to {-webkit-transform: scale(1)}
+	}
+	    
+	@keyframes animatezoom {
+	    from {transform: scale(0)} 
+	    to {transform: scale(1)}
+	}
+
+	/* Change styles for span and cancel button on extra small screens */
+	@media screen and (max-width: 300px) {
+	    span.psw {
+	       display: block;
+	       float: none;
+	    }
+	    .cancelbtn {
+	       width: 100%;
+	    }
+	}
+        
+	</style>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
+					<h1 id="logo"><a href="profile.html">Sarah Centino</a></h1>
+					<p>Student</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="profile.html">About Me</a></li>
+						<li><a href="profile.html">Services</a></li>
+						<li><a href="index.html">Log out</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+        <div class="container">
+            <header class="major">
+				<h2>Enrolment</h2>
+            </header>
+        <div class="enrollmentform">
+            <h3>Day</h3>
+        <select value="day">
+            <option value="sun">Sunday</option>
+            <option value="mon">Monday</option>
+            <option value="tues">Tuesday</option>
+            <option value="wed">Wednesay</option>
+            <option value="thurs">Thursday</option>
+            <option value="fri">Friday</option>
+            <option value="sat">Saturday</option>
+        </select><br>
+              <input type="submit" value="ADD DAY">
+
+        <br>
+            <hr>
+        <h3>Time</h3>
+        <select value="time">
+            <option>7:00 AM</option>
+            <option>7:30 AM</option>
+            <option>8:00 AM</option>
+            <option>8:30 AM</option>
+            <option>9:00 AM </option>
+            <option>9:30 AM</option>
+            <option>10:00 AM </option>
+            <option>10:30 AM</option>
+            <option>11:00 AM </option>
+            <option>11:30 AM</option>
+            <option>1:00 PM</option>
+            <option>1:30 PM </option>
+            <option>2:00 PM</option>
+            <option>2:30 AM </option>
+            <option>3:00 PM</option>
+            <option>3:30 PM </option>
+            <option>4:00 PM</option>
+            <option>4:30 PM </option>
+            <option>5:00 PM</option>
+            <option>5:30 PM </option>
+            <option>6:00 PM</option>
+            <option>6:30 OM </option>
+            <option>7:00 PM</option>
+            <option>7:30 PM</option>
+            <option>8:00 PM</option>
+        </select>
+        to 
+         <select value="time">
+            <option>7:00 AM</option>
+            <option>7:30 AM</option>
+            <option>8:00 AM</option>
+            <option>8:30 AM</option>
+            <option>9:00 AM </option>
+            <option>9:30 AM</option>
+            <option>10:00 AM </option>
+            <option>10:30 AM</option>
+            <option>11:00 AM </option>
+            <option>11:30 AM</option>
+            <option>1:00 PM</option>
+            <option>1:30 PM </option>
+            <option>2:00 PM</option>
+            <option>2:30 AM </option>
+            <option>3:00 PM</option>
+            <option>3:30 PM </option>
+            <option>4:00 PM</option>
+            <option>4:30 PM </option>
+            <option>5:00 PM</option>
+            <option>5:30 PM </option>
+            <option>6:00 PM</option>
+            <option>6:30 OM </option>
+            <option>7:00 PM</option>
+            <option>7:30 PM</option>
+            <option>8:00 PM</option>
+        </select>
+            
+		</div>
+	
+        <hr>
+        <div class="payment">
+        <h3> Payment Information </h3>
+        </div>
+        <br><br><br><br>
+        
+        <a href="profile.html">
+        <input type="submit" value="ENROLL">
+        </a>
+</div>
+                </div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; All rights reserved.</li><li>Design: iTutor</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script>
+			// Get the modal
+			var modal = document.getElementById('id01');
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			    if (event.target == modal) {
+			        modal.style.display = "none";
+			    }
+			}
+			</script>
+
+	</body>
+</html>
