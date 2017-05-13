@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	include '../../php/dbh.php';
-	$sql = "SELECT  account_id, name, service, specialization FROM registration WHERE status = 'pending'";
+	$sql = "SELECT  sp_id, sp_name FROM service_provider WHERE isAcceptedSP = 'F'";
 	$result = $conn->query($sql);
 ?>
 
@@ -33,20 +33,43 @@ tr:nth-child(even){background-color: #f2f2f2}
 		<tr>
 			<th>Name</th>
 			<th>Service Offered</th>
-			<th>Specialization</th>
 		</tr>
 		<?php
 			if ($result->num_rows > 0){
 				while($row = $result->fetch_assoc()) {
 				echo '<tr>';
-					echo "<td>$row[name]</td>";
-					echo "<td>$row[service]</td>";
-					echo "<td>$row[specialization]</td>";?>
+					echo "<td>$row[sp_name]</td>";
+					echo "<td><ul>";
+					$sql1 = "SELECT id_service FROM provider_specialization WHERE id_sp = '$row[sp_id]'";
+					$result1 = $conn->query($sql1);
+					while ($row1 = $result1->fetch_assoc()) {
+						$sql2 = "SELECT service_name FROM services WHERE service_id = '$row1[id_service]'";
+						$result2 = $conn->query($sql2);
+						while ($row2 = $result2->fetch_assoc()) {
+							echo "<li>$row2[service_name]</li>";
+						}
+					}
+					echo "</ul></td>";
+					/* $sql1 = "SELECT * FROM provider_specialization WHERE id_sp = '$row[sp_id]'";
+					$result1 = $conn->query($sql1);
+					echo "<td>";
+					while ($row1 = $result1->fetch_assoc()) {
+						$sql2 = "SELECT sevice_name FROM services WHERE service_id = 'row1[id_service]'";
+						$result2 = $conn->query($sql2);
+						while ($row2 = $result2->fetch_assoc()) {
+							echo "<ul><li>$row2[service_name]</li></ul>";
+						}
+						echo "</td>";
+						
+						
+					}
+					echo "</td>"*/
+					?>
 					<form action="php/accept.php" method="GET">
-						<td><button type="submit" name="accept" value="<?php print $row['account_id']; ?>">Approve</button></td>
+						<td><button type="submit" name="accept" value="<?php print $row['sp_id']; ?>">Approve</button></td>
 					</form>
 					<form action="php/deny.php" method="GET">
-						<td><button type="submit" name="deny" value="<?php print $row['account_id']; ?>">Deny</button></td>
+						<td><button type="submit" name="deny" value="<?php print $row['sp_id']; ?>">Deny</button></td>
 					</form>
 					<?php
 				echo '</tr>';

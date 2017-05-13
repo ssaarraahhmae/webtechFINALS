@@ -225,64 +225,64 @@ session_start();
             
         <div class="buttonMenu">
             <center>
-            <button class="button1" onclick="document.getElementById('id01').style.display='block'"><span>Service Provider</span></button>
+            <button class="button1" onclick="document.getElementById('id01').style.display='block'; var ifr=document.getElementsByName('registered_sp')[0]; ifr.src=ifr.src;"><span>Service Provider</span></button>
                 <!-- The Modal (contains the Sign Up form) -->
                     <div id="id01" class="modal">
                       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                       <form class="modal-content animate" action="/action_page.php">
                         <div class="container">
-                            
+                        <iframe src="registered_sp.php" name="registered_sp" height="300" width="600"></iframe>
                         </div>
                       </form>
                     </div>
-            <button class="button1" onclick="document.getElementById('id02').style.display='block'"><span>Pending SP </span></button><br>
+            <button class="button1" onclick="document.getElementById('id02').style.display='block'; var ifr=document.getElementsByName('pending_sp')[0]; ifr.src=ifr.src;"><span>Pending SP</span></button><br>
                     <!-- The Modal (contains the Sign Up form) -->
                     <div id="id02" class="modal">
                       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
                       <form class="modal-content animate" action="/action_page.php">
                         <div class="container">
-                        <iframe src="pending_sp.php" height="300" width="600"></iframe>
+                        <iframe src="pending_sp.php" name="pending_sp" height="300" width="600"></iframe>
                         </div>
                       </form>
                     </div>
-            <button class="button1" onclick="document.getElementById('id03').style.display='block'"><span>Costumer</span></button><br>
+            <button class="button1" onclick="document.getElementById('id03').style.display='block'; var ifr=document.getElementsByName('customer')[0]; ifr.src=ifr.src;"><span>Costumer</span></button><br>
                 <!-- The Modal (contains the Sign Up form) -->
                     <div id="id03" class="modal">
                       <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
                       <form class="modal-content animate" action="/action_page.php">
                         <div class="container">
-                        <iframe src="customer.php" height="300" width="600"></iframe>
+                        <iframe src="customer.php" name="customer" height="300" width="600"></iframe>
                         </div>
                       </form>
                     </div>
-            <button class="button1" onclick="document.getElementById('id04').style.display='block'"><span>Payments</span></button>
+            <button class="button1" onclick="document.getElementById('id04').style.display='block'; var ifr=document.getElementsByName('services_rendered')[0]; ifr.src=ifr.src;"><span>Services Rendered</span></button>
                 <!-- The Modal (contains the Sign Up form) -->
                     <div id="id04" class="modal">
                       <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
                       <form class="modal-content animate" action="/action_page.php">
                         <div class="container">
-                        <iframe src="payment.php" height="300" width="600"></iframe>
+                        <iframe src="payment.php" name="services_rendered" height="300" width="600"></iframe>
                         </div>
                       </form>
                     </div>
-            <button class="button1" onclick="document.getElementById('id05').style.display='block'"><span>Services Offered</span></button><br>
+            <button class="button1" onclick="document.getElementById('id05').style.display='block'; var ifr=document.getElementsByName('services_offered')[0]; ifr.src=ifr.src;"><span>Services Offered</span></button><br>
                 <!-- The Modal (contains the Sign Up form) -->
                     <div id="id05" class="modal">
                       <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
-                      <form class="modal-content animate" action="/action_page.php">
+                        <div class="modal-content animate">
                         <div class="container">
-                        <iframe src="pending_sp.php" height="300" width="600"></iframe>
-                            <button class="buttonAdd">Add/Delete Services</button>
+                        <iframe src="services_offered.php" name="services_offered" height="300" width="600"></iframe>
+                            <button class="buttonAdd" onclick="document.getElementById('id05').style.display='none'; document.getElementById('id06').style.display='block'; var ifr=document.getElementsByName('services')[0]; ifr.src=ifr.src;">
+                            Add/Delete Services</button> 
                         </div>
-                      </form>
+                        </div>
                     </div>
-            <button class="button1" onclick="document.getElementById('id06').style.display='block'"><span>Services Rendered</span></button>
-                <!-- The Modal (contains the Sign Up form) -->
+      
                     <div id="id06" class="modal">
                       <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal">&times;</span>
                       <form class="modal-content animate" action="/action_page.php">
                         <div class="container">
-                        <iframe src="services.php" height="300" width="600"></iframe>
+                        <iframe src="services.php" name="services" height="300" width="600"></iframe>
                         </div>
                       </form>
                     </div>

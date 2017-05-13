@@ -4,7 +4,7 @@ include '../../../php/dbh.php';
 
 $service = $_GET['service'];
 
-$sql = "DELETE FROM services_offered 
+$sql = "DELETE FROM services
 		WHERE service_id = $service";
 $result = $conn->query($sql);
 
