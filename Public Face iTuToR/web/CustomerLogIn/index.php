@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +20,7 @@
 </head>
 <style>
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text1], input[type=password] {
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -111,18 +115,26 @@ button {
 		</div>
 		<div class="login-box animated fadeInUp">
 			<div class="box-header">
-				<h2>Service Provider!</h2>
+				<h2>Customer!</h2>
 			</div>
+       <?php
+        if (isset($_SESSION['msg'])) {
+          echo $_SESSION['msg'];
+          unset($_SESSION['msg']);
+        }
+      ?>
+      <form action="php/clientlogin.php" method="POST">
 			<label for="username">Username</label>
 			<br/>
-			<input type="text" id="username">
+			<input type="text" name="username" id="username">
 			<br/>
 			<label for="password">Password</label>
 			<br/>
-			<input type="password" id="password">
+			<input type="password" name="password" id="password">
 			<br/>
 			<button type="submit">Log in!</button>
 			<br/>
+      </form>
 			<p class="small">Dont Have an Account?<br></p>
             <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" type="submit">Sign Up!</button>
 		</div>
@@ -130,14 +142,14 @@ button {
     
     <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-  <form class="modal-content animate" action="/action_page.php">
+  <form class="modal-content animate" action="php/registration.php" method="POST">
     <div class="container1">
       <label><b>Name</b></label><br>
-      <input type="text" placeholder="Enter Name" name="name" required><br>
+      <input type="text1" placeholder="Enter Name" name="name" required><br><br>
         
         
       <label><b>Email</b></label><br>
-      <input type="text" placeholder="Enter Email" name="email" required><br>
+      <input type="text1" placeholder="Enter Email" name="email" required><br>
 
       <label><b>Password</b></label><br>
       <input type="password" placeholder="Enter Password" name="psw" required><br>
@@ -145,20 +157,13 @@ button {
       <label><b>Repeat Password</b></label><br>
       <input type="password" placeholder="Repeat Password" name="psw-repeat" required><br>
         
-        <label><b>Skills</b></label><br>
-      <input type="text" placeholder="Enter Skills separated by (,) followed by a whitespace" name="skills" required><br>
-        
         <label><b>Contact #</b></label><br>
-      <input type="text" placeholder="+63xxxxxxxx" name="cpNumber" required><br>
+      <input type="text1" placeholder="+63xxxxxxxx" name="cpNumber" required><br>
         
         <label><b>Address</b></label><br>
-      <input type="text" placeholder="Enter Address" name="addrss" required><br>
-        
-        <form action="">
-          <input type="radio" name="gender" value="male"> Male<br>
-          <input type="radio" name="gender" value="female"> Female<br>
-        </form>
-
+      <input type="text1" placeholder="Enter Address" name="addrss" required><br>
+          <input type="radio" name="gender" value="M"> Male<br>
+          <input type="radio" name="gender" value="F"> Female<br>
         <br>
       <input type="checkbox" checked="checked">By creating an account you agree to our <a href="#">Terms & Privacy</a>.
 

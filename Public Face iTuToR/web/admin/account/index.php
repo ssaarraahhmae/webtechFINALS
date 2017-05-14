@@ -235,7 +235,7 @@ session_start();
                         </div>
                       </form>
                     </div>
-            <button class="button1" onclick="document.getElementById('id02').style.display='block'; var ifr=document.getElementsByName('pending_sp')[0]; ifr.src=ifr.src;"><span>Pending SP</span></button><br>
+            <button class="button1" onclick="document.getElementById('id02').style.display='block'; var ifr=document.getElementsByName('pending_sp')[0]; ifr.src=ifr.src;"><span>Pending SP Registration</span></button><br>
                     <!-- The Modal (contains the Sign Up form) -->
                     <div id="id02" class="modal">
                       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -253,6 +253,16 @@ session_start();
                       <form class="modal-content animate" action="/action_page.php">
                         <div class="container">
                         <iframe src="customer.php" name="customer" height="300" width="600"></iframe>
+                        </div>
+                      </form>
+                    </div>
+              <button class="button1" onclick="document.getElementById('id07').style.display='block'; var ifr=document.getElementsByName('pending_customer')[0]; ifr.src=ifr.src;"><span>Pending Costumer Registration</span></button><br>
+                <!-- The Modal (contains the Sign Up form) -->
+                    <div id="id07" class="modal">
+                      <span onclick="document.getElementById('id07').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      <form class="modal-content animate" action="/action_page.php">
+                        <div class="container">
+                        <iframe src="pending_customer.php" name="customer" height="300" width="600"></iframe>
                         </div>
                       </form>
                     </div>
