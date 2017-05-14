@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
 --
 -- Host: localhost    Database: webtek-2
 -- ------------------------------------------------------
--- Server version	5.7.14
+-- Server version	5.7.18
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -32,7 +32,7 @@ CREATE TABLE `customer` (
   `customer_homeaddress` varchar(45) NOT NULL,
   `isAccepted` enum('T','F') NOT NULL,
   PRIMARY KEY (`customer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4004 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4011 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES (4000,'Ryan Christian','rc@gmail.com','12345','09090909090','M','Bonifacio Street, Baguio City','T'),(4001,'Aerhielle Leonen','aerhielle@gmail.com','secret123','09090909009','F','Baguio City','T'),(4002,'Sarah Centino','sarahcentino@gmail.com','12314234','09090909090','F','Baguio City','T'),(4003,'Denver Culbengan','denverculbengan@gmail.com','12345678','09090909099','M','Baguio City','T');
+INSERT INTO `customer` VALUES (4000,'Juan Dela Cruz','jdc@gmail.com','12345','09173462534','M','Bonifacio Street, Baguio City','T'),(4001,'Maria Clara','clara@gmail.com','secret123','09069736231','F','Loakan, Baguio City','T'),(4002,'Zac Efron','zacefron@gmail.com','12341234','09057382234','M','Aurora Hill, Baguio City','T'),(4003,'Brad Pitt','brad123@gmail.com','12345678','09213846247','M','City Camp, Baguio City','T'),(4004,'Angelina Jolie','aj@gmail.com','98765432','09156726333','F','Palma, Baguio City','T'),(4005,'Leonardo DiCaprio','leonardo@gmail.com','password123','09278751237','M','New Lucban, Baguio City','T'),(4006,'Will Smith','smithwill@gmail.com','mypassword','09158071875','M','Irisan, Baguio CIty','T'),(4007,'Beyonce','knowles@gmail.com','star12345','09276125321','F','Brookside, Baguio City','T'),(4008,'Vanessa Hudgens','vh12@gmail.com','password12345','09156823123','F','Bakakeng, Baguio City','T'),(4009,'Coco Martin','cocomartin@gmail.com','coco123','09278231237','M','Engineers Hill, Baguio City','T'),(4010,'Piolo Pascual','pascual@gmai.com','pascual12','09218374323','M','Cabinet Hill, Baguio City','T');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +61,7 @@ CREATE TABLE `provider_specialization` (
   KEY `fkService_idx` (`id_service`),
   CONSTRAINT `fkSPID` FOREIGN KEY (`id_sp`) REFERENCES `service_provider` (`sp_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fkService` FOREIGN KEY (`id_service`) REFERENCES `services` (`service_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=5002 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5011 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +70,7 @@ CREATE TABLE `provider_specialization` (
 
 LOCK TABLES `provider_specialization` WRITE;
 /*!40000 ALTER TABLE `provider_specialization` DISABLE KEYS */;
-INSERT INTO `provider_specialization` VALUES (5000,3004,2002),(5001,3003,2002);
+INSERT INTO `provider_specialization` VALUES (5000,3004,2003),(5001,3003,2004),(5002,3005,2005),(5003,3006,2002),(5004,3007,2003),(5005,3008,2006),(5006,3009,2007),(5007,3010,2002),(5008,3011,2006),(5009,3012,2004),(5010,3013,2007);
 /*!40000 ALTER TABLE `provider_specialization` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -96,7 +96,7 @@ CREATE TABLE `requests` (
   KEY `fkCustomer_idx` (`id_customer`),
   CONSTRAINT `fkCustomer` FOREIGN KEY (`id_customer`) REFERENCES `customer` (`customer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fkSpecialization` FOREIGN KEY (`id_specialization`) REFERENCES `provider_specialization` (`specialization_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6004 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6011 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,7 +105,7 @@ CREATE TABLE `requests` (
 
 LOCK TABLES `requests` WRITE;
 /*!40000 ALTER TABLE `requests` DISABLE KEYS */;
-INSERT INTO `requests` VALUES (6000,5000,4000,'10:00 - 12:00','MWF','F','Ongoing','F'),(6001,5001,4001,'8:00 - 10:00','TTHS','T','Ongoing','F'),(6002,5000,4002,'3:00 - 5:00','MWF','T','Done','T'),(6003,5000,4003,'2:00 - 5:00','TTHS','F','Ongoing','F');
+INSERT INTO `requests` VALUES (6000,5000,4000,'10:00 - 12:00','MWF','F','Ongoing','F'),(6001,5001,4001,'8:00 - 10:00','TTHS','T','Ongoing','F'),(6002,5000,4002,'3:00 - 5:00','MWF','T','Done','T'),(6003,5000,4003,'2:00 - 5:00','TTHS','F','Ongoing','F'),(6004,5001,4004,'1:00 - 3:00','MWF','T','Done','T'),(6005,5002,4005,'4:00 - 6:00','TTHS','F','Ongoing','F'),(6006,5002,4006,'9:00 - 10:00','MWF','T','Done','T'),(6007,5003,4007,'1:00 - 3:00','MWF','F','Ongoing','F'),(6009,5004,4008,'3:00 - 5:00','TTHS','F','Ongoing','F'),(6010,5003,4009,'8:00 - 10:00','TTHS','T','Done','T');
 /*!40000 ALTER TABLE `requests` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,7 +127,7 @@ CREATE TABLE `service_provider` (
   `sp_homeaddress` varchar(100) NOT NULL,
   `isAcceptedSP` enum('T','F') NOT NULL DEFAULT 'F',
   PRIMARY KEY (`sp_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3005 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3014 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -136,7 +136,7 @@ CREATE TABLE `service_provider` (
 
 LOCK TABLES `service_provider` WRITE;
 /*!40000 ALTER TABLE `service_provider` DISABLE KEYS */;
-INSERT INTO `service_provider` VALUES (3001,'Administrator','admin','admin','Administrator','0','M','Local','T'),(3003,'Rusell Bayote','rusellbayote@gmail.com','mypassword','im a handy man','09164146533','M','Baguio City','F'),(3004,'Benedict Suarez','benedictsuarez@gmail.com','secret1234','I can do this and do that','09064763492','M','Aurora Hill, Baguio City','T');
+INSERT INTO `service_provider` VALUES (3001,'Administrator','admin','admin','Administrator','0','M','Local','T'),(3003,'Rusell Bayote','rusellbayote@gmail.com','mypassword','Provides guitar lessons','09164146533','M','Brookside, Baguio City','F'),(3004,'Benedict Suarez','benedictsuarez@gmail.com','secret1234','Provides voice lessons','09064763492','M','Aurora Hill, Baguio City','T'),(3005,'Ryan De Guzman','ryandeguzman@gmail.com','12345secret','Provides violin lessons','09156798762','M','New Lucban, Baguio CIty','F'),(3006,'Sarah Centino','sarahcentino@gmail.com','password12','Provides piano lessons','09056010255','F','Irisan, Baguio City','T'),(3007,'Aerhielle Leonen','aerhielleleonen@gmail.com','chocopie123','Provides voice lessons','09158071873','F','Palma, Baguio City','F'),(3008,'Mark Andawi','markandawi@gmail.com','mypass12','Provides drum lessons','09178037821','M','Loakan, Baguio City','T'),(3009,'Clyde Benitez','clydebenitez@gmail.com','secreet','Provides saxophone lessons','09358067123','M','Caguioa, Baguio City','F'),(3010,'Abigail Macanlalay','abimacanlalay@gmail.com','abi1234','Provides piano lessons','09167091234','F','Engineers Hill, Baguio City','T'),(3011,'Jay Bryan','jaybryan@gmail.com','jay12345','Provides drum lessons','09056021866','M','Cabinet Hill, Baguio City','F'),(3012,'Raoul Kristian','raoulkristian@gmail.com','rkpassword','Provides guitar lessons','09278967129','M','City Camp, Baguio City','T'),(3013,'Denver Culbengan','denverculbengan@gmail.com','pogiako','Provides saxophone lessons','09356719823','M','Bakakeng, Baguio City','F');
 /*!40000 ALTER TABLE `service_provider` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -151,7 +151,7 @@ CREATE TABLE `services` (
   `service_id` int(4) NOT NULL AUTO_INCREMENT,
   `service_name` varchar(45) NOT NULL,
   PRIMARY KEY (`service_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2003 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2008 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -160,7 +160,7 @@ CREATE TABLE `services` (
 
 LOCK TABLES `services` WRITE;
 /*!40000 ALTER TABLE `services` DISABLE KEYS */;
-INSERT INTO `services` VALUES (2002,'Piano Tutorial');
+INSERT INTO `services` VALUES (2002,'Piano Lessons'),(2003,'Voice Lessons'),(2004,'Guitar Lessons'),(2005,'Violin Lessons'),(2006,'Drum Lessons'),(2007,'Saxophone Lessons');
 /*!40000 ALTER TABLE `services` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -173,4 +173,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-14  4:33:11
+-- Dump completed on 2017-05-14 15:35:22
