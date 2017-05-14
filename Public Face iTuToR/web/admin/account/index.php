@@ -171,7 +171,7 @@ session_start();
   transform: translateY(4px);
 }
 
-	</style>
+    </style>
 	<body id="dbody">
        
 		<!-- Header -->
@@ -243,6 +243,7 @@ session_start();
                         <div class="container">
                         <iframe src="pending_sp.php" name="pending_sp" height="300" width="600"></iframe>
                         </div>
+                          
                       </form>
                     </div>
             <button class="button1" onclick="document.getElementById('id03').style.display='block'; var ifr=document.getElementsByName('customer')[0]; ifr.src=ifr.src;"><span>Costumer</span></button><br>
