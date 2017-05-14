@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['name'])) {
+  $_SESSION['msg'] = "You are not logged in.";
+            header('Location: ../');
+}
 
 ?>
 
@@ -181,7 +185,13 @@ session_start();
         </header>
         <div class="login-container animated fadeInRightBig">
 
-                <h1><?php echo 'Welcome ' . $_SESSION['name']; ?></h1>
+                <h1>
+				<?php
+			
+					echo 'Welcome ' . $_SESSION['name']; 
+			
+				?>
+				</h1>
                 <form action="php/logout.php"><button class="logout">Logout</button></form>
 
              
