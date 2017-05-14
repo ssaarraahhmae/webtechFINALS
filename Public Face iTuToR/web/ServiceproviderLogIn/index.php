@@ -21,9 +21,9 @@
 <style>
 /* Full-width input fields */
 input[type=text], input[type=password] {
-    width: 50%;
+    width: 95%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 8px 0 12px;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -52,7 +52,7 @@ button {
 
 /* Add padding to container elements */
 .container1 {
-    padding: 16px;
+    padding: 50px;
 }
 
 /* The Modal (background) */
@@ -73,9 +73,9 @@ button {
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 40%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
