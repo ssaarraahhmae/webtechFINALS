@@ -5,7 +5,7 @@ include '../../php/dbh.php';
 $email = $_POST['username'];
 $pwd = $_POST['password'];
 
-$sql = "SELECT * FROM service_provider WHERE sp_email = '$email' AND sp_password = '$pwd'";
+$sql = "SELECT * FROM service_provider WHERE sp_email = '$email' AND sp_password = '$pwd' AND isAcceptedSP = 'T'";
 $result = $conn->query($sql);
 
 if (!$row = $result->fetch_assoc()) {
