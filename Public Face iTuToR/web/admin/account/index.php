@@ -225,7 +225,7 @@ session_start();
             
         <div class="buttonMenu">
             <center>
-            <button class="button1" onclick="document.getElementById('id01').style.display='block'; var ifr=document.getElementsByName('registered_sp')[0]; ifr.src=ifr.src;"><span>Service Provider</span></button>
+            <button class="button1" onclick="document.getElementById('id01').style.display='block'; var ifr=document.getElementsByName('registered_sp')[0]; ifr.src=ifr.src;"><span>Registered Service Provider</span></button>
                 <!-- The Modal (contains the Sign Up form) -->
                     <div id="id01" class="modal">
                       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -246,7 +246,7 @@ session_start();
                           
                       </form>
                     </div>
-            <button class="button1" onclick="document.getElementById('id03').style.display='block'; var ifr=document.getElementsByName('customer')[0]; ifr.src=ifr.src;"><span>Costumer</span></button><br>
+            <button class="button1" onclick="document.getElementById('id03').style.display='block'; var ifr=document.getElementsByName('customer')[0]; ifr.src=ifr.src;"><span>Customer</span></button><br>
                 <!-- The Modal (contains the Sign Up form) -->
                     <div id="id03" class="modal">
                       <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -266,7 +266,7 @@ session_start();
                         </div>
                       </form>
                     </div>
-            <button class="button1" onclick="document.getElementById('id04').style.display='block'; var ifr=document.getElementsByName('services_rendered')[0]; ifr.src=ifr.src;"><span>Services Rendered</span></button>
+            <button class="button1" onclick="document.getElementById('id04').style.display='block'; var ifr=document.getElementsByName('services_rendered')[0]; ifr.src=ifr.src;"><span>Service Render</span></button>
                 <!-- The Modal (contains the Sign Up form) -->
                     <div id="id04" class="modal">
                       <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
