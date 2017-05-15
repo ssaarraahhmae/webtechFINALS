@@ -20,10 +20,10 @@
 </head>
 <style>
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text1], input[type=password] {
     width: 95%;
     padding: 12px 20px;
-    margin: 8px 0 12px;
+    margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -34,7 +34,7 @@ button {
     background-color: #665851;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 8px 0;;
     border: none;
     cursor: pointer;
     width: 25%;
@@ -146,7 +146,7 @@ button {
   <form class="modal-content animate" action="php/registration.php" method="POST">
     <div class="container1">
       <label><b>Name</b></label><br>
-      <input type="text1" placeholder="Enter Name" name="name" required><br><br>
+      <input type="text1" placeholder="Enter Name" name="name" required><br>
         
         
       <label><b>Email</b></label><br>
