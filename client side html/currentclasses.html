@@ -39,6 +39,15 @@
 	    opacity: 0.8;
 	}
 
+	h1:hover {
+    	opacity: 0.5;
+    	color: #4CAF50;
+    } 
+
+    nav ul li:hover{
+    	opacity: 0.5;
+    	color: #4CAF50;
+
 	/* Extra styles for the cancel button */
 	.cancelbtn {
 	    width: auto;
@@ -173,39 +182,56 @@
 			<div id="wrapper">
 
 				<!-- Main -->
-					<div id="main">
+                <div id="main">
 
-        <div class="container">
-            <header class="major">
+    <div class="container">
+      <div class="featured-block">
 				<h2>Current Classes</h2>
-            </header>
+          <div class="ruler"></div>
         
-        <div class="section">
-            
-            <h3> Music Lesson </h3> <!-- name of course enrolled by the customer-->
-            
-            <!-- insert image of the teacher in rounded circle -->    
-            <img class="img-circle" src="images/avatar.png" style="border-radius:50%;height:100px;" alt="">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="block">
+            <div class="thumbnail">
+              <img class="img-circle" src="images/avatar.png" style="border-radius:50%;height:100px;" alt="">
+              <div class="caption">
+                  <h1>Music Lesson</h1>
+        
             <p> Teacher: </p> <!-- this should be float from the right -->
             <p> Email: </p>   <!-- this should be float from the right -->
             <p> Time: </p>    <!-- this should be float from the right -->
             <p> Day: </p>     <!-- this should be float from the right -->
-        </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
         
            
-        <div class="section1">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="block">
+            <div class="thumbnail">
+            <img class="img-circle" src="images/avatar.png" style="border-radius:50%;height:100px;" alt="">
+            <div class="caption">
             
             <h3> Guitar Lesson </h3> <!-- name of course enrolled by the customer-->
             
-            <!-- insert image of the teacher in rounded circle -->    
-            <img class="img-circle" src="images/avatar.png" style="border-radius:50%;height:100px;" alt="">
             <p> Teacher: </p> <!-- this should be float from the right -->
             <p> Email: </p>   <!-- this should be float from the right -->
             <p> Time: </p>    <!-- this should be float from the right -->
             <p> Day: </p>     <!-- this should be float from the right -->
-        </div>
             </div>
+            </div>
+            </div>
+            </div>
+              </div>
                 </div>
+                    </div>
+                </div>
+        </div>
+
+
 
 				<!-- Footer -->
 					<section id="footer">
@@ -216,7 +242,7 @@
 						</div>
 					</section>
 
-			</div>
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

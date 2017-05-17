@@ -120,6 +120,15 @@
 	    from {-webkit-transform: scale(0)} 
 	    to {-webkit-transform: scale(1)}
 	}
+
+	h1:hover {
+    	opacity: 0.5;
+    	color: #4CAF50;
+    } 
+
+    nav ul li:hover{
+    	opacity: 0.5;
+    	color: #4CAF50;
 	    
 	@keyframes animatezoom {
 	    from {transform: scale(0)} 
@@ -173,17 +182,21 @@
 			<div id="wrapper">
 
 				<!-- Main -->
-					<div id="main">
+				<div id="main">
 
         <div class="container">
+            
+            
             <header class="major">
 				<h2>Profile</h2>
             </header>
         
         <div class="infoprofile">
+            
   
                 <img src="images/avatar.png" alt="Mountain View" style="width:228px; height:228px;">
-                <br>
+
+            <div class="box">
                 <h3>Basic Information</h3>
                 Name: Sarah Centino  <br>
                 Gender: Female<br>
@@ -193,14 +206,34 @@
                 <h3>Contact Information</h3>
                 Email Address: hsgdha@gmail.com <br>
                 Contact Number: 09373848378 <br>
-            <hr>
+   
                 
 		<a href="editprofile.html">
             <input type="submit" value="Edit Profile">
 		</a>
         </div>
+            
+            <div class="box">
+                
+                <img class="img-circle" src="images/avatar.png" style="border-radius:50%;height:100px;" alt="">
+            <div class="caption">
+            
+            <h3> Guitar Lesson </h3> <!-- name of course enrolled by the customer-->
+            
+            <p> Teacher: </p> <!-- this should be float from the right -->
+            <p> Email: </p>   <!-- this should be float from the right -->
+            <p> Time: </p>    <!-- this should be float from the right -->
+            <p> Day: </p>     <!-- this should be float from the right -->
+                
             </div>
-                </div>
+            
+
+            
+            
+
+
+</div>
+
 
 				<!-- Footer -->
 					<section id="footer">
@@ -212,6 +245,8 @@
 					</section>
 
 			</div>
+                </div>
+        </div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
